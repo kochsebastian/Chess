@@ -1,0 +1,27 @@
+Projektbeschreibung: Sebastian Koch 5224697
+
+Es soll ein Programm entwickelt werden, das ein Schachspiel fuer 2 Spieler bereitstellt.
+Ein Spieler steuert die weissen Figuren, der andere die Schwarzen. 
+Die Zuege werden ueber die Kommandozeile eingegeben und das Schachfeld auch ueber die Kommandozeile ausgegeben. 
+Die Zugeingabe unterliegt vorgegebenen Regeln,
+ werden diese Regeln vom Spieler missachtet, wird eine IOEception geworfen oder gar eine NullPointerException, 
+welche durch entsprechendes Handlings den Spieler auffordern wird die Zugeingabe zu wiederholen.
+
+Es existieren drei Aktoren: Der weisse sowie schwarz Spieler und die Engine die auf die Korrecktheit aller Aktionen achtet.
+ Der weisse Spieler bewegt ausschliesslich die weissen Figuren und der Schwarze ausschliesslich die schwarzen Figuren. 
+Eine Figur ist klar einem Spieler zugeordnet und kann nicht seine Zugehoerigkeit/Farbe wechseln. 
+Die Anfangsaufstellung der Schachfiguren ist immer gleich und entspricht der Standardaufstellung im Schach 
+(Leicht- und Schwerfiguren + Koenig und Dame auf der letzten Reihe und eine Bauern Reihe jeweils davor). 
+Jede Schachfigur hat ein eigenes Bewegungsmuster und bedroht dabei unterschiedlich viele Felder. Ein gueltiger Zug, 
+der vom jeweiligen Spieler eingeleitet wird, bildet den ersten Use Case, darunter fallen normale Zuege, aber auch
+ Spezialzuege wie (lange / kurze) Rochade oder Bauernumwandlung. Ungueltige Zuege werden von der Engine gehandlelt und der Spieler
+wird aufgefordert einen gueltigen Zug einzugeben.
+Ausserdem ist es fuer den weissen oder schwarzen Spieler moeglich gegnerische Figuren zu schlagen (Erweiterung des ersten Use Cases), 
+jede Figur besitzt zusaetzlich zu dem Bewegungsmuster auch noch ein gewisses Schlagmuster, welches sich aber nur beim Bauern vom 
+Bewegungsmuster unterscheidet.
+Der zweite Use Case ist die Drohung eines Schachs oder die erfolgreiche Schachmattsetzung. Eine Schachdrohung erfolgt, wenn der 
+Koenig auf einem bedrohten Schachfeld steht, kann der Koenig der Schachdrohung nicht ausweichen, die schachgebende Figur nicht 
+geschlagen werden, oder eine Figur zwischen die schachgebende Figur und Koenig gestellt werden ist ein Schachmatt gelungen.
+Das Spiel wird solange fortgesetzt, bis einem Spieler ein Schachmattsetzten des gegnerischen Koenigs gelingt.
+
+
